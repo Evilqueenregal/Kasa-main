@@ -8,6 +8,7 @@ import Logement from './pages/Logement';
 import Error from './pages/Error';
 import Header from './components/Header';
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/a-propos" element={<About />} />
         <Route path="/logement/:id" element={<Logement />} />
         <Route path="*" element={<Error />} />
+        {/* <Route path="/datas/:id" element={<datas />} /> */}
       </Routes>
     </Router>
   </React.StrictMode>,

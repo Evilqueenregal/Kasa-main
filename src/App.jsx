@@ -1,13 +1,16 @@
 import React from "react";
 import Header from "./components/Header.jsx";
 import "./App.css";
-import Banner from "./components/Banner.jsx";
+import Home from "./pages/Home.jsx";
+import Thumb from "./components/Thumbs.jsx";
+
 
 function App() {
   return (
     <div>
       <Header />
-      <Banner />
+      <Home />
+      <Thumb />
     </div>
   )
 }
