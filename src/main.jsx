@@ -7,7 +7,7 @@ import About from './pages/About';
 import Logement from './pages/Logement';
 import Error from './pages/Error';
 import Header from './components/Header';
-
+import Footer from "./components/Footer.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -20,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="*" element={<Error />} />
         {/* <Route path="/datas/:id" element={<datas />} /> */}
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>,
 );

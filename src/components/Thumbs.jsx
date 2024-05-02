@@ -1,19 +1,19 @@
-// import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-// function Thumb ({ datas }) {
-//   return (
-//     datas.map((datas) => (
-//       <Link to={`/datas/${datas.id}`} className="thumb" key={datas.id}>
-//         <img src={datas.cover} alt={datas.title} />
-//         <h3>{datas.title}</h3>
-//       </Link>
-//     ))
-//   );
-// };
+function Thumb ({ datas }) {
+   return (
+    <Link to={`/logement/${datas.id}`} className="thumb" key={datas.id}>
+        <article className="logement">
+            <img src={datas.cover} alt={datas.title} />
+            <h3>{datas.title}</h3>
+        </article>
+    </Link>
+   );
+}
 
-// Thumb.propTypes = {
-//   datas: PropTypes.array.isRequired
-// };
+Thumb.propTypes = {
+   datas: PropTypes.array.isRequired
+};
 
-// export default Thumb;
+export default Thumb;
