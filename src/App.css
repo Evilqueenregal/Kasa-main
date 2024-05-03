@@ -84,3 +84,30 @@ footer {
     display: grid;
     place-items: center;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #f6f6f6;
+    margin: 20px;
+}
+.logement {
+    position: relative;
+    img {
+        min-height: 25vh;
+        border-radius: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+        justify-content: space-between;
+        width: 93%;
+    }
+    h3 {
+        position: absolute;
+        bottom: 0;
+        font-size: small;
+        color: white;
+        padding: 8px 26px;
+    }
+}

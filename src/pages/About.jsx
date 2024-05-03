@@ -1,9 +1,9 @@
+import Banner from "../components/Banner";
+
 function About() {
     return(
         <div className="about">
-       <div className="banner2">
-            <img src="src\assets\banner2.jpg" alt="banner2" />
-        </div>
+            <Banner imagePath="src/assets/banner2.jpg" />
        /</div> 
     )
 }
