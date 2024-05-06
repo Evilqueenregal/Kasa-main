@@ -1,6 +1,14 @@
+import datas from "../datas/datas.json";
+import Apparts from '../components/Apparts';
+
 function Logement(){
     return(
-        <h1>Logement</h1>
+       
+        <div className="logements">
+        {datas.map((datas) => (
+            <Apparts datas={datas} key={datas.id}/>
+        ))}
+        </div>
     )
 }
 

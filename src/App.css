@@ -111,3 +111,21 @@ footer {
         padding: 8px 26px;
     }
 }
+
+.logements{
+    width: 50%;
+}
+
+.section {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    button {
+        display: flex;
+        background-color: #ff6060;
+        color: white;
+        width: 100%;
+        padding: 10px;
+        margin: 20px;
+    }
+}
