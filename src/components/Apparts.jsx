@@ -18,8 +18,9 @@ function Logement() {
     // Afficher les détails du logement
     return (
         <div className="logement">
-            <h1>{logement.title}</h1>
             <img src={logement.cover} alt={logement.title} />
+            <h1>{logement.title}</h1>
+            <p>{logement.location}</p>
             <p>{logement.description}</p>
             <h2>Équipements</h2>
             <ul>
@@ -33,8 +34,6 @@ function Logement() {
                     <li key={index}>{tag}</li>
                 ))}
             </ul>
-            <h2>Localisation</h2>
-            <p>{logement.location}</p>
             <h2>Hôte</h2>
             <p>{logement.host.name}</p>
             <img src={logement.host.picture} alt={logement.host.name} />

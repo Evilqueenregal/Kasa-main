@@ -3,11 +3,8 @@ import Apparts from '../components/Apparts';
 
 function Logement(){
     return(
-       
         <div className="logements">
-        {datas.map((datas) => (
             <Apparts datas={datas} key={datas.id}/>
-        ))}
         </div>
     )
 }
