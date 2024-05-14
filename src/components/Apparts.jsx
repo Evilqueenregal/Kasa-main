@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import datas from '../datas/datas.json';
+import Collapsible from './Collapsible';
 
 function Logement() {
     // Récupérer l'ID du logement à partir de l'URL
@@ -21,13 +22,18 @@ function Logement() {
             <img src={logement.cover} alt={logement.title} />
             <h1>{logement.title}</h1>
             <p>{logement.location}</p>
-            <p>{logement.description}</p>
-            <h2>Équipements</h2>
-            <ul>
-                {logement.equipments.map((equipment, index) => (
-                    <li key={index}>{equipment}</li>
-                ))}
-            </ul>
+            <div className='collapsible-container'>
+            <Collapsible title="Description">
+                <p>{logement.description}</p>
+            </Collapsible>
+            <Collapsible title="Équipements">
+                <ul>
+                    {logement.equipments.map((equipment, index) => (
+                        <li key={index}>{equipment}</li>
+                    ))}
+                </ul>
+            </Collapsible>
+            </div>
             <h2>Tags</h2>
             <ul>
                 {logement.tags.map((tag, index) => (
