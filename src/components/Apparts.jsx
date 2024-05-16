@@ -1,8 +1,9 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import datas from '../datas/datas.json';
 import Collapsible from './Collapsible';
+import Carousel from './Carousel';
+import Error from '../pages/Error';
 
 function Logement() {
     // Récupérer l'ID du logement à partir de l'URL
@@ -11,15 +12,15 @@ function Logement() {
     // Rechercher les détails du logement correspondant dans datas.json
     const logement = datas.find(item => item.id === id);
 
-    // Vérifier si le logement existe
-    if (!logement) {
-        return <div>Logement introuvable</div>;
+      // Vérifier si le logement existe
+      if (!logement) {
+        return <Error />;
     }
 
-    // Afficher les détails du logement
-    return (
+     // Afficher les détails du logement
+     return (
         <div className="logement">
-            <img src={logement.cover} alt={logement.title} />
+            <Carousel pictures={logement.pictures} />
             <h1>{logement.title}</h1>
             <p>{logement.location}</p>
             <div className='collapsible-container'>
@@ -41,8 +42,10 @@ function Logement() {
                 ))}
             </ul>
             <h2>Hôte</h2>
+            <div className="badge">
             <p>{logement.host.name}</p>
             <img src={logement.host.picture} alt={logement.host.name} />
+            </div>
         </div>
     );
 }

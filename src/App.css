@@ -113,7 +113,7 @@ footer {
 }
 
 .logements{
-    width: 50%;
+    width: 100%;
 h1{
     color: #ff6060;
     margin-left: 10px;
@@ -167,9 +167,8 @@ h1{
 }
 
 
-/* .carousel {
+.carousel {
     position: relative;
-    max-width: 600px;
     margin: auto;
   }
   
@@ -178,18 +177,13 @@ h1{
   }
   
   .carousel img {
-    width: 100%;
-    display: block;
+    width: 95%;
+    height: 20rem;
+   object-fit: cover;
   }
   
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 24px;
+  .carousel button {
+    position: relative;
     cursor: pointer;
   }
   
@@ -200,4 +194,13 @@ h1{
   .next-button {
     right: 0;
   }
-   */
+  
+.badge p{
+    margin-left: 75%;
+}
+
+.badge img{
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 75%;
+  }
