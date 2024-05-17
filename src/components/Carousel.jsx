@@ -14,16 +14,19 @@ const Carousel = ({ pictures }) => {
 
   return (
     <div className="carousel">
-      <button onClick={prevImage}>Previous</button>
-      <img src={pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
-      <button onClick={nextImage}>Next</button>
+        <button className="carousel-button prev-button" onClick={prevImage}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+        <img src={pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
+        <button className="carousel-button next-button" onClick={nextImage}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
     </div>
   );
 };
 
 Carousel.propTypes = {
-  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+   pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Carousel;
-
