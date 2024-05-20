@@ -21,6 +21,9 @@ const Carousel = ({ pictures }) => {
         <button className="carousel-button next-button" onClick={nextImage}>
           <i className="fa-solid fa-chevron-right"></i>
         </button>
+        <div className="carousel-counter">
+          {currentIndex + 1} / {pictures.length}
+        </div>
     </div>
   );
 };

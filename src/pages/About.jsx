@@ -7,7 +7,7 @@ function About() {
         <div className="about">
             <Banner imagePath="src/assets/banner2.jpg" />
             <Collapse
-                title="Fiabilité"
+                title="Fiabilité" 
                 children="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes"
             />
               <Collapse
@@ -22,7 +22,7 @@ function About() {
                 Tout comportement discriminatoire ou de perturbation du 
                 voisinage entraînera une exclusion de notre plate forme."
             /> 
-                    <Collapse
+                <Collapse
                 title="Sécurité"
                 children="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour
                 les voyageurs, chaque logement correspond aux critères de sécurité établis 

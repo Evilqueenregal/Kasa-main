@@ -5,6 +5,7 @@ import Collapsible from './Collapsible';
 import Carousel from './Carousel';
 import Error from '../pages/Error';
 
+
 function Logement() {
     // Récupérer l'ID du logement à partir de l'URL
     const { id } = useParams();
@@ -23,28 +24,26 @@ function Logement() {
             <Carousel pictures={logement.pictures} />
             <h1>{logement.title}</h1>
             <p>{logement.location}</p>
+            <div className="badge">
+            <p>{logement.host.name}</p>
+            <img src={logement.host.picture} alt={logement.host.name} />
+            </div>
+            <ul class="no-bullets">
+                {logement.tags.map((tag, index) => (
+                    <li key={index}>{tag}</li>
+                ))}
+            </ul>
             <div className='collapsible-container'>
             <Collapsible title="Description">
                 <p>{logement.description}</p>
             </Collapsible>
             <Collapsible title="Équipements">
-                <ul>
+                <ul className="info">
                     {logement.equipments.map((equipment, index) => (
                         <li key={index}>{equipment}</li>
                     ))}
                 </ul>
             </Collapsible>
-            </div>
-            <h2>Tags</h2>
-            <ul>
-                {logement.tags.map((tag, index) => (
-                    <li key={index}>{tag}</li>
-                ))}
-            </ul>
-            <h2>Hôte</h2>
-            <div className="badge">
-            <p>{logement.host.name}</p>
-            <img src={logement.host.picture} alt={logement.host.name} />
             </div>
         </div>
     );

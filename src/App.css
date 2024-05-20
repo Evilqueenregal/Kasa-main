@@ -122,7 +122,7 @@ h1{
     color: black;
     margin: 0;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 22px;
  }
 }
 
@@ -153,10 +153,20 @@ h1{
     width: 90%;
 }
 
-.collapsible-container{
+.collapsible-content{
     display: flex;
     gap: 50%;
+    background-color: #f6f6f6;
+}
+
+.collapsible{
+    padding: 20px;
+}
+
+.collapsible-container{
+    display: flex;
     margin-top: 20px;
+    width: 50%;
 }
 
 .collapsible-header{
@@ -164,6 +174,11 @@ h1{
     color: white;
     border: 5px solid #ff6060;
     border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
 
@@ -206,20 +221,57 @@ h1{
   .carousel-button i {
     pointer-events: none;
   }
+
+  .carousel-counter {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    z-index: 10;
+  }
   
 .badge {
-    width: 100%;
-    display: inline-flex;
+    display:flex;
     align-items: center;
     justify-content: center;
+    margin-top: -111px;
 }
 
 .badge p{
-    margin-left: 75%;
+    margin-left: 80%;
 }
 
 .badge img{
     border-radius: 50%;
-    max-width: 10%;
+    max-width: 7%;
     min-height: 10%;
+  }
+
+ul {
+    display: flex;
+   
+}
+
+.info  {
+    display: flex;
+    flex-direction: column;
+}
+
+  .no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .no-bullets li {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: #ff6060;
+    color: white;
+    border: 5px solid #ff6060;
+    border-radius: 15px;
+    font-size: 12px;
   }

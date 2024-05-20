@@ -12,6 +12,7 @@ const Collapsible = ({ title, children }) => {
         <div className="collapsible">
             <button className="collapsible-header" onClick={toggleOpen}>
                 {title}
+                <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
             </button>
             {isOpen && <div className="collapsible-content">{children}</div>}
         </div>
