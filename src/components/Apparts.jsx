@@ -4,6 +4,7 @@ import datas from '../datas/datas.json';
 import Collapsible from './Collapsible';
 import Carousel from './Carousel';
 import Error from '../pages/Error';
+import Rating from './Rating';
 
 
 function Logement() {
@@ -18,6 +19,8 @@ function Logement() {
         return <Error />;
     }
 
+    
+
      // Afficher les détails du logement
      return (
         <div className="logement">
@@ -28,6 +31,9 @@ function Logement() {
             <p>{logement.host.name}</p>
             <img src={logement.host.picture} alt={logement.host.name} />
             </div>
+
+            <Rating rating={Rating} onRatingChange={Rating} />
+
             <ul class="no-bullets">
                 {logement.tags.map((tag, index) => (
                     <li key={index}>{tag}</li>

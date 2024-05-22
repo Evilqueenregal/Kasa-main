@@ -161,6 +161,7 @@ h1{
 
 .collapsible{
     padding: 20px;
+    width: 100%;
 }
 
 .collapsible-container{
@@ -274,4 +275,21 @@ ul {
     border: 5px solid #ff6060;
     border-radius: 15px;
     font-size: 12px;
+  }
+
+  .rating {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    gap: 10px;
+  }
+
+  .star{
+    cursor: pointer;
+    color: #e3e3e3; 
+    font-size: 2rem;
+  }
+
+  .star.filled {
+    color:#ff6060;
   }
