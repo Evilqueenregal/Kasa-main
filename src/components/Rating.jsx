@@ -26,7 +26,7 @@ const Rating = ({ rating, onRatingChange }) => {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick(index)}
         >
-          ★
+          <i className="fa-solid fa-star"></i>
         </span>
       ))}
     </div>
@@ -34,8 +34,8 @@ const Rating = ({ rating, onRatingChange }) => {
 };
 
 Rating.propTypes = {
-  rating: PropTypes.number.isRequired,
-  onRatingChange: PropTypes.func.isRequired,
+  rating: PropTypes.string.isRequired,
+  onRatingChange: PropTypes.string.isRequired,
 };
 
 export default Rating;

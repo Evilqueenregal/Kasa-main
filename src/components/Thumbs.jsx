@@ -13,7 +13,8 @@ function Thumb ({ datas }) {
 }
 
 Thumb.propTypes = {
-   datas: PropTypes.array.isRequired
-};
+    datas: PropTypes.object.isRequired
+ };
+ 
 
 export default Thumb;

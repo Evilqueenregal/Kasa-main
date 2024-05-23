@@ -32,9 +32,9 @@ function Logement() {
             <img src={logement.host.picture} alt={logement.host.name} />
             </div>
 
-            <Rating rating={Rating} onRatingChange={Rating} />
+            <Rating rating={logement.rating} onRatingChange={logement.rating} />
 
-            <ul class="no-bullets">
+            <ul className="no-bullets">
                 {logement.tags.map((tag, index) => (
                     <li key={index}>{tag}</li>
                 ))}

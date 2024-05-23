@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .menu {
@@ -30,7 +30,7 @@ a {
     }
     h1{
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
@@ -242,6 +242,7 @@ h1{
 
 .badge p{
     margin-left: 80%;
+    color: #ff6060;
 }
 
 .badge img{
