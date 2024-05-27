@@ -6,8 +6,10 @@ function Header() {
     <header>
       <nav className="menu">
         <img src={Logo} alt="logo" />
+        <div className='navbar'>
         <Link to="/">Accueil</Link>
         <Link to="/a-propos">A propos</Link>
+        </div>
       </nav>
     </header>
   )

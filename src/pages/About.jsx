@@ -5,7 +5,10 @@ function About() {
     
     return(
         <div className="about">
-            <Banner imagePath="src/assets/banner2.jpg" />
+        <div className="banner2">
+        <Banner imagePath="src/assets/banner2.jpg" />
+        </div>
+        <div className="indication">
             <Collapse
                 title="Fiabilité" 
                 children="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes"
@@ -30,6 +33,7 @@ function About() {
                 cela permet à nos équipes de vérifier que les standards sont bien respectés. 
                 Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
             /> 
+            </div>
         </div>
        
     );
