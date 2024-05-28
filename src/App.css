@@ -127,13 +127,14 @@ footer {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     background-color: #f6f6f6;
     border-radius: 25px;
     padding: 10px;
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 98%;
+    margin: 30px auto;
 }
 
 .logement {
@@ -144,8 +145,10 @@ footer {
         height: 300px;
         margin: 10px;
         object-fit: cover;
-        width: 365px;
+        width: 385px;
         justify-content: space-around;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+
     }
   
     h3 {

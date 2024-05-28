@@ -12,18 +12,26 @@ const Carousel = ({ pictures }) => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
   };
 
+  const hasMultipleImages = pictures.length > 1;
+
   return (
     <div className="carousel">
+      {hasMultipleImages && (
         <button className="carousel-button prev-button" onClick={prevImage}>
           <i className="fa-solid fa-chevron-left"></i>
         </button>
+        )}
         <img src={pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
+        {hasMultipleImages && (
         <button className="carousel-button next-button" onClick={nextImage}>
           <i className="fa-solid fa-chevron-right"></i>
         </button>
+        )}
+        {hasMultipleImages && (
         <div className="carousel-counter">
           {currentIndex + 1} / {pictures.length}
         </div>
+        )}
     </div>
   );
 };
