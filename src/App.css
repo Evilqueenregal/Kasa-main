@@ -229,7 +229,6 @@ h1{
     width: 100%;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 7px;
 }
 
 .collapsible-header{
@@ -258,7 +257,6 @@ h1{
    width: 100%;
    height: 415px;
    border-radius: 2rem;
-   padding: 1rem;
    object-fit: cover;
   }
   
@@ -303,9 +301,8 @@ h1{
     justify-content: space-between;
     margin: 20px auto;
     max-width: 1500px;
-    padding: 20px;
   }
-
+   
   .description-info h1{
     margin: 10px;
   }
