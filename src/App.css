@@ -80,17 +80,16 @@ a {
 }
 
 .indication {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 30px;
+    max-width: 1500px;
+    margin: 0 auto 50px;
+    padding: 0 85px;
 }
 
 .indication .collapsible {
-    padding: 10px 20px 10px 15px;
+    padding: 0;
+    margin: 20px 0;
     width: 100%;
+    max-width: inherit;
 }
 
 .error {
@@ -137,18 +136,29 @@ footer {
     margin: 30px auto;
 }
 
+.gallery article:after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+    width: 100%;
+    height: 100%;
+}
+
 .logement {
     position: relative;
+    margin: 10px;
     img {
         border-radius: 10px;
         display: flex;
         height: 300px;
-        margin: 10px;
         object-fit: cover;
         width: 385px;
         justify-content: space-around;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
-
     }
   
     h3 {
@@ -161,21 +171,7 @@ footer {
     }
 }
 
-/* .logement::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 10px;
-    width: 95%;
-    height: 97%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
-    border-radius: 10px; 
-    z-index: 1; 
-    pointer-events: none;
-} */
-
 .logements{
-    width: 100%;
 h1{
     color: #ff6060;
     margin-left: 30px;
@@ -260,7 +256,7 @@ h1{
   
   .carousel img {
    width: 100%;
-   height: 330px;
+   height: 415px;
    border-radius: 2rem;
    padding: 1rem;
    object-fit: cover;
@@ -300,23 +296,48 @@ h1{
     font-size: 14px;
     z-index: 10;
   }
+
+  .description {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1500px;
+    padding: 20px;
+  }
+
+  .description-info h1{
+    margin: 10px;
+  }
+
+  .description-info p{
+    margin: 10px;
+  }
+
+  .host-rating  {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+  }
   
 .badge {
     display:flex;
     align-items: center;
-    justify-content: center;
-    margin-top: -111px;
+    padding: 5px 25px;
 }
 
 .badge p{
-    margin-left: 82%;
     color: #ff6060;
+    font-size: 18px;
+    margin-right: 15px;
+    text-align: end;
 }
 
 .badge img{
     border-radius: 50%;
-    width: 70px;
     height: 70px;
+    width: 70px;
+    object-fit: cover;
   }
 
 ul {
@@ -328,11 +349,13 @@ ul {
 .info  {
     display: flex;
     flex-direction: column;
+    padding: 0 15px;
 }
 
   .no-bullets {
-    list-style-type: none;
-    padding-left: 7px;
+    display: flex;
+    position: relative;
+    right: 15px;
   }
 
   .no-bullets li {
@@ -351,6 +374,7 @@ ul {
     justify-content: flex-end;
     margin-right: 30px;
     gap: 10px;
+    margin-top: 10px;
   }
 
   .star{

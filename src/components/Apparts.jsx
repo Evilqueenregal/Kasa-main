@@ -25,20 +25,25 @@ function Logement() {
      return (
         <div className="logement">
             <Carousel pictures={logement.pictures} />
+            <div className="description">
+            <div className="description-info">
             <h1>{logement.title}</h1>
             <p>{logement.location}</p>
-            <div className="badge">
-            <p>{logement.host.name}</p>
-            <img src={logement.host.picture} alt={logement.host.name} />
-            </div>
-
-            <Rating rating={logement.rating} onRatingChange={logement.rating} />
-
             <ul className="no-bullets">
                 {logement.tags.map((tag, index) => (
                     <li key={index}>{tag}</li>
                 ))}
             </ul>
+            </div>
+            <div className="host-rating">
+            <div className="badge">
+            <p>{logement.host.name}</p>
+            <img src={logement.host.picture} alt={logement.host.name} />
+            </div>
+            <Rating rating={logement.rating} onRatingChange={logement.rating} />
+            </div>
+           
+            </div>
             <div className='collapsible-container'>
             <Collapsible title="Description">
                 <p>{logement.description}</p>
