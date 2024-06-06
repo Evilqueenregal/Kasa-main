@@ -244,6 +244,16 @@ h1{
     font-size: 1.5rem;
 }
 
+@media (max-width: 768px) {
+    .collapsible {
+        max-width: 100%;
+    }
+
+    .collapsible-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
 
 .carousel {
     position: relative;
@@ -295,6 +305,12 @@ h1{
     z-index: 10;
   }
 
+  @media (max-width: 768px) {
+    .carousel-counter {
+      display: none;
+    }
+  }
+
   .description {
     align-items: center;
     display: flex;
@@ -312,9 +328,8 @@ h1{
   }
 
   .host-rating  {
-    display: flex;
     flex-direction: column;
-    margin-bottom: auto;
+    align-items: flex-end;
   }
   
 .badge {
@@ -382,4 +397,43 @@ ul {
 
   .star.filled {
     color:#ff6060;
+  }
+
+  @media (max-width: 768px) {
+    .description {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .host-rating {
+      flex-direction: row-reverse;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  
+    .badge {
+      text-align: left;
+      order: -5;
+      padding: 0;
+    }
+  
+    .badge p {
+    font-size: 100%;
+    width: 100%;
+    }
+
+    .badge img {
+        width: 30%;
+        height: 30%;
+    }
+
+    .rating {
+     display: flex;
+     flex-direction: row;
+    }
+  
   }
